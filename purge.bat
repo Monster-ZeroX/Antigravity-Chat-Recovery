@@ -5,7 +5,10 @@ echo ==========================================
 echo.
 
 echo 1. Force-closing Antigravity...
+:: Broad-spectrum task kill to catch both legacy and modern executable names
 taskkill /F /IM antigravity.exe >nul 2>&1
+taskkill /F /IM antigravity-ide.exe >nul 2>&1
+taskkill /F /IM "Antigravity IDE.exe" >nul 2>&1
 timeout /t 2 /nobreak >nul
 
 echo 2. Deleting corrupted cache and UI storage...
